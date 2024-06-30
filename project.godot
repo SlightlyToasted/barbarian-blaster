@@ -14,3 +14,9 @@ config/name="Barbarian-blaster"
 run/main_scene="res://base_level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=2304
+window/size/viewport_height=1296
+window/size/resizable=false
