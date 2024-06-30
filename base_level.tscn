@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://6sx3rik8ao3f"]
+[gd_scene load_steps=9 format=3 uid="uid://6sx3rik8ao3f"]
 
 [ext_resource type="MeshLibrary" uid="uid://1h1hcx3bjis" path="res://SpaceLibrary.tres" id="1_soaa4"]
+[ext_resource type="PackedScene" uid="uid://ukworx5rbjxi" path="res://enemy.tscn" id="2_278kk"]
+[ext_resource type="PackedScene" uid="uid://cwubpmpe7vhbr" path="res://base.tscn" id="3_e1anq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ds1ep"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,7 +22,7 @@ albedo_color = Color(0.27, 0.18792, 0.1836, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_o2wvw"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -29, 0, 11, 0, 0, 0, 1.05, 2.08165e-12, 2.08165e-12, -9, 0, 11, 0, 0, 0, 1, 0, -2, -6, 0, 10, 0, 0, 0, 1.14, 2.08165e-12, 2.08165e-12, -6, 0, -6, -1.05383, 0, -0.602786, 1.05383, 0, 0.602786, 18, 0, -6, 0.696949, 0, -1.07061, -0.696949, 0, 1.07061, 18, 0, 2, 1.02643, 0, -0.35684, -1.02643, 0, 0.35684, 2, 0, 2, -1, 0, -1, 1, 0, 1, 2, 0, 10, 0, 0, 0, 0, 0, 0, 24, 0, 10),
+"points": PackedVector3Array(-1, -2.08165e-12, -2.08165e-12, 1, 2.08165e-12, 2.08165e-12, -21.5, 0, 10.9, 0, 0, 0, 1.05, 2.08165e-12, 2.08165e-12, -9, 0, 11, 0, 0, 0, 1, 0, -2, -6, 0, 10, 0, 0, 0, 1.14, 2.08165e-12, 2.08165e-12, -6, 0, -6, -1.05383, 0, -0.602786, 1.05383, 0, 0.602786, 18, 0, -6, 0.696949, 0, -1.07061, -0.696949, 0, 1.07061, 18, 0, 2, 1.02643, 0, -0.35684, -1.02643, 0, 0.35684, 2, 0, 2, -1, 0, -1, 1, 0, 1, 2, 0, 10, 0, 0, 0, 0, 0, 0, 24, 0, 10),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 9
@@ -92,3 +94,9 @@ path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
+
+[node name="Enemy" parent="Path3D" instance=ExtResource("2_278kk")]
+transform = Transform3D(-4.37103e-08, -2.08165e-12, -0.999975, 1.08418e-19, 1, -2.0816e-12, 0.999975, -1.99412e-19, -4.37103e-08, -20, 0, 11)
+speed = 5.0
+
+[node name="Base" parent="." instance=ExtResource("3_e1anq")]
